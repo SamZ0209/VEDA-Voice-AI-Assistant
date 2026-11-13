@@ -1,0 +1,133 @@
+
+.veda-memory-center {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 0 25px;
+  background: #121d2b;
+  border: 1px solid #30445a;
+  border-radius: 16px;
+  color: #e9efff;
+  text-align: left;
+  overflow: hidden;
+}
+
+.veda-memory-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 20px;
+}
+
+.veda-memory-heading h3 {
+  margin: 0 0 5px;
+  font-size: 17px;
+}
+
+.veda-memory-heading p {
+  margin: 0;
+  color: #9db1c9;
+  font-size: 12px;
+}
+
+.veda-memory-actions,
+.veda-memory-buttons {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.veda-memory-center button {
+  border: 1px solid #4b6380;
+  background: #263950;
+  color: #f2f7ff;
+  border-radius: 8px;
+  padding: 7px 12px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+}
+
+.veda-memory-center button:hover:not(:disabled) {
+  background: #395678;
+}
+
+.veda-memory-center button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.veda-memory-body {
+  border-top: 1px solid #30445a;
+  padding: 8px 20px 20px;
+  max-height: 450px;
+  overflow: auto;
+}
+
+.veda-memory-body h4 {
+  font-size: 13px;
+  margin: 17px 0 11px;
+}
+
+.veda-memory-muted {
+  color: #9db1c9;
+  font-size: 13px;
+}
+
+.veda-memory-error {
+  color: #ffb0b0;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.veda-memory-card {
+  border: 1px solid #39475b;
+  border-radius: 11px;
+  background: #1c2b3d;
+  padding: 13px;
+  margin: 9px 0;
+}
+
+.veda-memory-card p {
+  margin: 8px 0 13px;
+  font-size: 13px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.veda-memory-category {
+  display: inline-block;
+  font-size: 11px;
+  color: #9ed7ff;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.veda-memory-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.veda-memory-edit select,
+.veda-memory-edit textarea {
+  width: 100%;
+  border: 1px solid #526984;
+  background: #102031;
+  color: #f6faff;
+  border-radius: 7px;
+  padding: 9px;
+  font: inherit;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .veda-memory-heading {
+    flex-wrap: wrap;
+  }
+
+  .veda-memory-body {
+    padding: 8px 12px 15px;
+  }
+}

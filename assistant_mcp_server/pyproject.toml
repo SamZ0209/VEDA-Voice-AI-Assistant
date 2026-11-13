@@ -1,0 +1,19 @@
+[project]
+name = "assistant-mpc-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "SamZ0209", email = "101006499+SamZ0209@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "mcp>=2.3.0",
+]
+
+[project.scripts]
+assistant-mpc-server = "assistant_mpc_server:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"

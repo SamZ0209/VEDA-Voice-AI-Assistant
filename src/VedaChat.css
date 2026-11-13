@@ -1,0 +1,277 @@
+
+.veda-chat {
+  width: min(100%, 800px);
+  margin: 28px auto;
+  background: #171d2b;
+  border: 1px solid #303a4f;
+  border-radius: 18px;
+  overflow: hidden;
+  color: #e9efff;
+  text-align: left;
+}
+
+.veda-chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #303a4f;
+}
+
+.veda-chat-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.veda-mode-switch {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 10px;
+  background: #252e40;
+}
+
+.veda-mode-switch button {
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #c2cbe0;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.veda-mode-switch button.selected {
+  background: #4668a6;
+  color: #fff;
+}
+
+.veda-messages {
+  height: 330px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+}
+
+.veda-empty {
+  color: #a6b1c6;
+  text-align: center;
+  margin: auto;
+}
+
+.veda-message {
+  max-width: 84%;
+  padding: 12px 15px;
+  border-radius: 13px;
+  background: #293247;
+  overflow-wrap: anywhere;
+}
+
+.veda-message.from-user {
+  align-self: flex-end;
+  background: #344e79;
+}
+
+.veda-message.from-assistant {
+  align-self: flex-start;
+}
+
+.veda-message strong {
+  display: block;
+  font-size: 12px;
+  color: #b9d2ff;
+  margin-bottom: 5px;
+}
+
+.veda-message p {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.veda-compose {
+  display: flex;
+  gap: 9px;
+  padding: 14px;
+  border-top: 1px solid #303a4f;
+}
+
+.veda-compose input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #43506a;
+  background: #232d40;
+  color: white;
+  font: inherit;
+}
+
+.veda-compose input::placeholder {
+  color: #a8b1c5;
+}
+
+.veda-compose button {
+  border: 0;
+  border-radius: 10px;
+  padding: 0 20px;
+  background: #5276bb;
+  color: white;
+  cursor: pointer;
+}
+
+.veda-compose button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   CONVERSATION HISTORY LAYOUT
+   ========================================== */
+
+.veda-history-layout {
+  width: min(100%, 1100px);
+  margin: 28px auto;
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.veda-history-layout .veda-chat {
+  width: 100%;
+  margin: 0;
+  min-width: 0;
+}
+
+.veda-history-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  padding: 16px;
+  background: #171d2b;
+  border: 1px solid #303a4f;
+  border-radius: 18px;
+  color: #e9efff;
+  text-align: left;
+}
+
+.veda-history-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.veda-history-heading h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.veda-history-heading button {
+  background: transparent;
+  border: 0;
+  color: #b9d2ff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.veda-new-chat {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #5276bb;
+  border-radius: 10px;
+  background: #344e79;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  text-align: left;
+}
+
+.veda-new-chat:hover {
+  background: #4668a6;
+}
+
+.veda-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 430px;
+  overflow-y: auto;
+}
+
+.veda-history-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 12px;
+  background: #232d40;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #e9efff;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+}
+
+.veda-history-item:hover {
+  background: #2e3a50;
+}
+
+.veda-history-item.active {
+  border-color: #7094d7;
+  background: #344e79;
+}
+
+.veda-history-preview {
+  font-size: 13px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.veda-history-date,
+.veda-history-count {
+  font-size: 11px;
+  color: #a6b1c6;
+}
+
+.veda-history-error {
+  color: #ff9c9c;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.veda-history-empty {
+  font-size: 12px;
+  color: #a6b1c6;
+  line-height: 1.5;
+}
+
+@media (max-width: 750px) {
+  .veda-history-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .veda-history-list {
+    max-height: 175px;
+  }
+}
+
+@media (max-width: 550px) {
+  .veda-chat-header {
+    flex-wrap: wrap;
+  }
+
+  .veda-message {
+    max-width: 95%;
+  }
+}
+
